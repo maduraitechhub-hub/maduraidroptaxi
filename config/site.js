@@ -12,7 +12,7 @@ export const DOMAIN_CONFIGS = {
     siteName: 'TamilNadu Drop Taxi',
     siteTagline: 'Premium Cab Service',
     siteDescription:
-      'Tamil Nadu's most trusted taxi service. Safe, affordable, and reliable cab booking across all 38 districts since 2015.',
+      'Tamil Nadu most trusted taxi service. Safe, affordable, and reliable cab booking across all 38 districts since 2015.',
     siteUrl: 'https://tamilnadudroptaxi.com',
     phone: '+918122148519',
     phoneDisplay: '+91 81221 48519',
