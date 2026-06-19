@@ -215,3 +215,84 @@ export const ALL_CITIES_LIST = [
   'Thanjavur', 'Dindigul', 'Krishnagiri', 'Kanyakumari', 'Kallakurichi',
   'Dharmapuri', 'Karaikudi', 'Rameshwaram', 'Ramanathapuram',
 ];
+
+/**
+ * ─────────────────────────────────────────────────────────
+ *  MADURAI — LOCAL SIGHTSEEING + ROUND TRIP DATA
+ *  Backs the dedicated /madurai-local-round-trip-taxi page.
+ *  Fares computed from the live fareConfig.js formula
+ *  (Sedan ₹15/km + ₹400 driver allowance) so numbers shown
+ *  on this page always stay consistent with the booking
+ *  form's own "Get Instant Fare Estimate" results.
+ * ─────────────────────────────────────────────────────────
+ */
+
+/** Local / hourly rental packages, featured for "Madurai local trip" intent */
+export const MADURAI_LOCAL_PACKAGES = [
+  {
+    label: '2 Hours / 20 KM',
+    price: '₹700',
+    bestFor: 'Quick temple visit or a couple of nearby spots',
+  },
+  {
+    label: '4 Hours / 40 KM',
+    price: '₹1,000',
+    bestFor: 'Meenakshi Temple + 2–3 more sightseeing stops',
+    popular: true,
+  },
+  {
+    label: '8 Hours / 80 KM',
+    price: '₹1,600',
+    bestFor: 'A full-day Madurai sightseeing circuit',
+  },
+];
+
+/** Places typically covered on a Madurai local sightseeing trip */
+export const MADURAI_SIGHTSEEING_SPOTS = [
+  'Meenakshi Amman Temple',
+  'Thirumalai Nayakkar Mahal',
+  'Gandhi Memorial Museum',
+  'Vandiyur Mariamman Teppakulam',
+  'Alagar Koil',
+  'Pazhamudhir Solai',
+];
+
+/** Round trip routes ex-Madurai, Sedan starting fares (km × 2 × ₹15 + ₹400) */
+export const MADURAI_ROUND_TRIP_ROUTES = [
+  { to: 'Rameswaram', km: '168 km', price: '₹5,440' },
+  { to: 'Kodaikanal', km: '120 km', price: '₹4,000' },
+  { to: 'Kanyakumari', km: '240 km', price: '₹7,600' },
+  { to: 'Thekkady (Periyar)', km: '140 km', price: '₹4,600' },
+  { to: 'Munnar', km: '170 km', price: '₹5,500' },
+  { to: 'Chennai', km: '465 km', price: '₹14,350' },
+  { to: 'Coimbatore', km: '213 km', price: '₹6,790' },
+  { to: 'Trichy', km: '134 km', price: '₹4,420' },
+];
+
+/** FAQs targeting "Madurai local trip" + "Madurai round trip taxi" long-tail SEO */
+export const MADURAI_LOCAL_ROUNDTRIP_FAQS = [
+  {
+    q: 'What is the fare for a Madurai local sightseeing taxi?',
+    a: 'Our Madurai local packages start at ₹700 for 2 Hours / 20 KM, ₹1,000 for 4 Hours / 40 KM, and ₹1,600 for a full 8 Hours / 80 KM sightseeing day — all in a Sedan with driver allowance included.',
+  },
+  {
+    q: 'Which places are covered in a Madurai local trip?',
+    a: 'Popular stops include Meenakshi Amman Temple, Thirumalai Nayakkar Mahal, Gandhi Memorial Museum, Vandiyur Mariamman Teppakulam, Alagar Koil, and Pazhamudhir Solai. We can customise the route based on your package hours.',
+  },
+  {
+    q: 'What is the round trip taxi fare from Madurai to Rameswaram?',
+    a: 'A Madurai to Rameswaram round trip taxi starts from ₹5,440 for a Sedan (approx. 168 km one-way, billed as a 336 km round trip with driver allowance included).',
+  },
+  {
+    q: 'Can I book a round trip taxi for an overnight or multi-day Madurai to Kodaikanal or Munnar trip?',
+    a: 'Yes, multi-day round trips are available. For trips spanning more than one day, an additional driver allowance applies per extra day — our team will confirm the exact total when you share your travel dates on call or WhatsApp.',
+  },
+  {
+    q: 'Is a Madurai to Kodaikanal or Munnar weekend round trip possible?',
+    a: 'Absolutely — Kodaikanal (starting ₹4,000) and Munnar (starting ₹5,500) are popular weekend round trip routes from Madurai, both well-suited to a 2-day plan with one driver allowance per day.',
+  },
+  {
+    q: 'How do I book a Madurai local or round trip taxi?',
+    a: 'Use the booking form on this page — choose the "Rental" tab for a local sightseeing package or the "Round Trip" tab for an outstation route, fill in your details, and get an instant fare estimate before confirming.',
+  },
+];
