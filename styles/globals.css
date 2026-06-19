@@ -214,24 +214,12 @@ body {
 
 .hero {
   min-height: 100vh;
-  /* background: linear-gradient(145deg, var(--navy-deep) 0%, var(--navy-dark) 45%, var(--dark2) 100%); */
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-image: url('/images/bnnerbg.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgb(0 0 0 / 42%);
-  z-index: 0;
+  /* background handled by Next.js <Image fill> inside .hero-bg */
+  background: var(--navy-deep); /* fallback while image loads */
 }
 
 .hero-bg-pattern {
@@ -2938,4 +2926,107 @@ details[open] { background: var(--navy-light); border-color: var(--navy); }
   .cities-grid { grid-template-columns: 1fr; }
   .route-table { font-size: 12px; }
   .route-table th, .route-table td { padding: 8px 10px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MISSING CLASSES — HomePageClient fixes
+   ═══════════════════════════════════════════════════════════ */
+
+/* section--alt (BEM variant used in HomePageClient) */
+.section--alt { background: var(--gray); }
+
+/* ── Services section ───────────────────────────────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--gold));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px var(--shadow-navy);
+  border-color: var(--navy);
+}
+
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background: var(--navy-light);
+  border-radius: 16px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.service-card:hover .service-icon { background: var(--navy); }
+.service-icon img { width: 100%; height: 100%; object-fit: contain; }
+.service-title { font-size: 16px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
+.service-desc  { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* ── Feature icon image variant (HomePageClient uses feature-icon-img) ── */
+.feature-icon-img {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.feature-icon-img img { width: 100%; height: 100%; object-fit: contain; }
+
+/* ── Hero title gold accent ─────────────────────────────── */
+/* Must be more specific than .hero-title span { color: white } */
+.hero-title .hero-title-accent { color: var(--gold); }
+
+/* ── FAQ answer text (HomePageClient uses .faq-answer, not .faq-a) ── */
+.faq-answer {
+  padding: 0 20px 18px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Responsive fixes ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .services-grid { grid-template-columns: 1fr; }
 }
