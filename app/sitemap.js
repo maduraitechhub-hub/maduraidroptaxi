@@ -1,25 +1,37 @@
-import { site } from '../config/site';
-import { CITY_SLUGS } from '../config/locations';
+import { CITY_SLUGS } from '@/config/locations';
+
+const SITE_URL = 'https://www.tamilnadudroptaxi.com';
+
+/** Static routes with SEO priority hints */
+const staticRoutes = [
+  { path: '/',             priority: 1.0,  changeFreq: 'weekly'  },
+  { path: '/book',         priority: 0.9,  changeFreq: 'monthly' },
+  { path: '/cities',       priority: 0.85, changeFreq: 'weekly'  },
+  { path: '/about',        priority: 0.7,  changeFreq: 'monthly' },
+  { path: '/contact',      priority: 0.7,  changeFreq: 'monthly' },
+  { path: '/partner',      priority: 0.6,  changeFreq: 'monthly' },
+  // Dedicated Madurai local + round trip landing page
+  {
+    path:       '/madurai-local-round-trip-taxi',
+    priority:   0.87,
+    changeFreq: 'weekly',
+  },
+];
 
 export default function sitemap() {
-  const base = site.siteUrl;
-  const now = new Date();
-
-  const staticRoutes = [
-    { url: `${base}/`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${base}/book`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/cities`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/partner`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-  ];
-
-  const cityRoutes = CITY_SLUGS.map((slug) => ({
-    url: `${base}/taxi/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.85,
+  const staticEntries = staticRoutes.map(({ path, priority, changeFreq }) => ({
+    url:              `${SITE_URL}${path}`,
+    lastModified:     new Date(),
+    changeFrequency:  changeFreq,
+    priority,
   }));
 
-  return [...staticRoutes, ...cityRoutes];
+  const cityEntries = CITY_SLUGS.map((slug) => ({
+    url:              `${SITE_URL}/taxi/${slug}`,
+    lastModified:     new Date(),
+    changeFrequency:  'weekly',
+    priority:         0.8,
+  }));
+
+  return [...staticEntries, ...cityEntries];
 }
