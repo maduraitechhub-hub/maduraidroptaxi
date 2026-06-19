@@ -1,113 +1,116 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
-import { site } from '../../config/site';
-import { CITIES } from '../../config/locations';
+import Image from 'next/image';
 
 const SERVICES = [
-  { label: 'Airport Drop/Pickup', href: '/book' },
-  { label: 'Outstation Cabs', href: '/book' },
-  { label: 'One Way Taxi', href: '/book' },
-  { label: 'Round Trip Cabs', href: '/book' },
-  { label: 'Local Rentals', href: '/book' },
+  { label: 'One-Way Drop Taxi',             href: '/book'                          },
+  { label: 'Outstation Cab Booking',        href: '/book'                          },
+  { label: 'Airport Taxi Service',          href: '/book'                          },
+  { label: 'Corporate Cab Service',         href: '/book'                          },
+  { label: 'Madurai Local & Round Trip',    href: '/madurai-local-round-trip-taxi' },
+  { label: 'Driver Partner Programme',      href: '/partner'                       },
 ];
 
-const POPULAR_ROUTES = [
-  'Madurai → Chennai',
-  'Chennai → Bangalore',
-  'Madurai → Coimbatore',
-  'Trichy → Chennai',
-  'Coimbatore → Ooty',
-  'Salem → Chennai',
+const QUICK_LINKS = [
+  { label: 'Home',           href: '/'        },
+  { label: 'Book a Taxi',    href: '/book'    },
+  { label: 'Our Cities',     href: '/cities'  },
+  { label: 'About Us',       href: '/about'   },
+  { label: 'Contact Us',     href: '/contact' },
+  { label: 'Partner With Us',href: '/partner' },
+];
+
+const TOP_ROUTES = [
+  { label: 'Chennai → Madurai',     href: '/taxi/madurai'     },
+  { label: 'Chennai → Coimbatore',  href: '/taxi/coimbatore'  },
+  { label: 'Chennai → Trichy',      href: '/taxi/trichy'      },
+  { label: 'Madurai → Chennai',     href: '/taxi/chennai'     },
+  { label: 'Coimbatore → Chennai',  href: '/taxi/chennai'     },
+  { label: 'Trichy → Chennai',      href: '/taxi/chennai'     },
 ];
 
 export default function Footer() {
-  return (
-    <footer className="footer" role="contentinfo">
-      <div className="footer-inner">
-        <div className="footer-grid">
-          {/* Brand */}
-          <div className="footer-brand">
-            <Link href="/" className="footer-logo" aria-label={`${site.siteName} Home`}>
-              <Image src={site.logo} alt={site.siteName} width={52} height={52} className="footer-logo-img" />
-              <div>
-                <div className="footer-logo-name">{site.siteName}</div>
-                <div className="footer-logo-sub">{site.siteTagline}</div>
-              </div>
-            </Link>
-            <p className="footer-brand-desc">{site.siteDescription}</p>
+  const year = new Date().getFullYear();
 
-            {/* Contact */}
+  return (
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-grid">
+
+          {/* Brand column */}
+          <div className="footer-brand-col">
+            <Link href="/" className="footer-logo-link">
+              <Image
+                src="/images/logo-white.png"
+                alt="TamilNadu Drop Taxi logo"
+                width={180}
+                height={48}
+                priority={false}
+              />
+            </Link>
+            <p className="footer-tagline">
+              Tamil Nadu&apos;s most trusted one-way outstation taxi service.
+              Transparent fares. Verified drivers. 24/7 availability.
+            </p>
             <div className="footer-contact">
-              <a href={`tel:${site.phone}`} className="footer-contact-link">📞 {site.phoneDisplay}</a>
-              <a
-                href={`https://wa.me/${site.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-contact-link"
-              >
-                💬 WhatsApp
+              <a href="tel:+919751500800" className="footer-contact-link">
+                <span className="footer-contact-icon">📞</span>
+                +91-97515 00800
               </a>
-              <a href={`mailto:${site.email}`} className="footer-contact-link">📧 {site.email}</a>
+              <a href="mailto:info@tamilnadudroptaxi.com" className="footer-contact-link">
+                <span className="footer-contact-icon">✉️</span>
+                info@tamilnadudroptaxi.com
+              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <div className="footer-col-title">Quick Links</div>
-            <ul className="footer-links">
-              {[
-                ['Home', '/'],
-                ['Book Taxi', '/book'],
-                ['Cities We Serve', '/cities'],
-                ['About Us', '/about'],
-                ['Partner With Us', '/partner'],
-                ['Contact Us', '/contact'],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <div className="footer-col-title">Services</div>
-            <ul className="footer-links">
+          {/* Services column */}
+          <div className="footer-links-col">
+            <h4 className="footer-col-heading">Our Services</h4>
+            <ul className="footer-link-list">
               {SERVICES.map((s) => (
-                <li key={s.label}>
-                  <Link href={s.href}>{s.label}</Link>
+                <li key={s.href + s.label}>
+                  <Link href={s.href} className="footer-link">{s.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* City SEO Links */}
-          <div>
-            <div className="footer-col-title">City Taxi Services</div>
-            <ul className="footer-links">
-              {CITIES.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/taxi/${c.slug}`}>{c.name} Drop Taxi</Link>
+          {/* Quick links column */}
+          <div className="footer-links-col">
+            <h4 className="footer-col-heading">Quick Links</h4>
+            <ul className="footer-link-list">
+              {QUICK_LINKS.map((l) => (
+                <li key={l.href + l.label}>
+                  <Link href={l.href} className="footer-link">{l.label}</Link>
                 </li>
               ))}
-              <li>
-                <Link href="/cities">View All Cities →</Link>
-              </li>
             </ul>
           </div>
+
+          {/* Top routes column */}
+          <div className="footer-links-col">
+            <h4 className="footer-col-heading">Popular Routes</h4>
+            <ul className="footer-link-list">
+              {TOP_ROUTES.map((r) => (
+                <li key={r.href + r.label}>
+                  <Link href={r.href} className="footer-link">{r.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
 
-        {/* Bottom */}
+        {/* Bottom bar */}
         <div className="footer-bottom">
-          <span>
-            © {new Date().getFullYear()}{' '}
-            <span className="footer-bottom-brand">{site.siteName}</span>. All rights reserved.
-          </span>
+          <p className="footer-copy">
+            © {year} TamilNadu Drop Taxi. All rights reserved.
+          </p>
           <div className="footer-bottom-links">
-            <a href="/sitemap.xml" rel="nofollow">Sitemap</a>
-            <span>·</span>
-            <Link href="/contact">Support</Link>
+            <Link href="/privacy-policy"    className="footer-bottom-link">Privacy Policy</Link>
+            <Link href="/terms-conditions"  className="footer-bottom-link">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>
