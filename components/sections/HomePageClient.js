@@ -112,7 +112,7 @@ export default function HomePageClient() {
             <h1 className="hero-title">
               Safe & Affordable
               <span className="hero-title-accent"> Drop Taxi</span>
-              <br />Across Tamil Nadu
+              Across Tamil Nadu
             </h1>
             <p className="hero-sub">
               One-way drops, airport transfers & outstation cab service across all 38 districts.
@@ -137,13 +137,6 @@ export default function HomePageClient() {
                 💬 WhatsApp Us
               </a>
             </div>
-
-            {/* Trust signals */}
-            <div className="hero-trust">
-              <span>✅ Verified Drivers</span>
-              <span>✅ GPS Tracked</span>
-              <span>✅ No Hidden Charges</span>
-            </div>
           </div>
 
           {/* Booking Form */}
@@ -157,7 +150,7 @@ export default function HomePageClient() {
       </section>
 
       {/* ── STATS ──────────────────────────────── */}
-      <StatsBar />
+      {/* <StatsBar /> */}
 
       {/* ── SERVICES ──────────────────────────── */}
       <section className="section" aria-labelledby="services-heading">

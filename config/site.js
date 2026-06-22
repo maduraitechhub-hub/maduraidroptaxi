@@ -9,15 +9,15 @@
 export const DOMAIN_CONFIGS = {
   tamilnadudroptaxi: {
     siteKey: 'tamilnadudroptaxi',
-    siteName: 'TamilNadu Drop Taxi',
+    siteName: 'Top Drop Taxi',
     siteTagline: 'Premium Cab Service',
     siteDescription:
       'Tamil Nadu most trusted taxi service. Safe, affordable, and reliable cab booking across all 38 districts since 2015.',
     siteUrl: 'https://tamilnadudroptaxi.com',
-    phone: '+918122148519',
-    phoneDisplay: '+91 81221 48519',
-    whatsapp: '918122148519',
-    email: 'hello@tamilnadudroptaxi.com',
+    phone: '+91888366100',
+    phoneDisplay: '+91 888366100',
+    whatsapp: '91888366100',
+    email: 'hello@.com',
     address: 'Tamil Nadu, India',
     established: '2015',
     googleAdsId: 'AW-18168765995',
@@ -29,8 +29,8 @@ export const DOMAIN_CONFIGS = {
     logo: '/logo.png',
     favicon: '/logo.png',
     social: {
-      facebook: 'https://facebook.com/tamilnadudroptaxi',
-      instagram: 'https://instagram.com/tamilnadudroptaxi',
+      facebook: 'https://facebook.com',
+      instagram: 'https://instagram.com',
       twitter: '',
     },
     baseCity: 'Chennai',

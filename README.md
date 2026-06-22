@@ -1,4 +1,4 @@
-# TamilNadu Drop Taxi — Next.js Production Website
+# Top Drop Taxi — Next.js Production Website
 
 A production-ready, SEO-optimised Next.js 14 taxi booking website built from analysis of tamilnadudroptaxi.com. Designed for high Lighthouse scores, Google Ads lead generation, and multi-domain scaling.
 
@@ -222,7 +222,7 @@ Zero code changes. The same codebase serves both domains with different branding
 | Phone Call Click | `trackCallClick()` | ₹100 |
 
 ### Recommended Campaigns
-1. **Search — Branded**: "TamilNadu Drop Taxi", "tamilnadudroptaxi.com"
+1. **Search — Branded**: "Top Drop Taxi", "tamilnadudroptaxi.com"
 2. **Search — Service**: "drop taxi Tamil Nadu", "one way cab Tamil Nadu"
 3. **Search — City**: "Madurai drop taxi", "Chennai to Bangalore cab"
 4. **Search — Route**: "Chennai to Coimbatore taxi fare"

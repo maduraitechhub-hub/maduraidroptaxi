@@ -12,7 +12,7 @@ export const CITIES = [
     displayName: 'Madurai',
     description: 'Temple City of Tamil Nadu',
     longDescription:
-      'Madurai, the cultural capital of Tamil Nadu, is home to the iconic Meenakshi Amman Temple. Book a reliable drop taxi from Madurai to anywhere across Tamil Nadu with TamilNadu Drop Taxi.',
+      'Madurai, the cultural capital of Tamil Nadu, is home to the iconic Meenakshi Amman Temple. Book a reliable drop taxi from Madurai to anywhere across Tamil Nadu with Top Drop Taxi.',
     image: '/images/madurai.png',
     routes: 12,
     popular: true,
@@ -27,7 +27,7 @@ export const CITIES = [
       },
       {
         q: 'Is there a 24/7 taxi service available in Madurai?',
-        a: 'Yes, TamilNadu Drop Taxi provides round-the-clock taxi service in Madurai for airport transfers, outstation trips, and local rides.',
+        a: 'Yes, Top Drop Taxi provides round-the-clock taxi service in Madurai for airport transfers, outstation trips, and local rides.',
       },
       {
         q: 'What vehicles are available for Madurai drop taxi service?',
@@ -57,7 +57,7 @@ export const CITIES = [
         a: 'A one-way taxi from Chennai to Bangalore starts at ₹5,264 for a Sedan (approx. 350 km). Premium vehicles like Innova are also available.',
       },
       {
-        q: 'Does TamilNadu Drop Taxi provide airport transfers in Chennai?',
+        q: 'Does Top Drop Taxi provide airport transfers in Chennai?',
         a: 'Yes, we provide prompt airport pick-up and drop service from Chennai International Airport (MAA) at any hour.',
       },
       {
@@ -119,7 +119,7 @@ export const CITIES = [
         a: 'A one-way taxi from Trichy to Chennai starts at ₹5,045 for a Sedan (approximately 335 km via NH38).',
       },
       {
-        q: 'Does TamilNadu Drop Taxi operate from Trichy airport?',
+        q: 'Does Top Drop Taxi operate from Trichy airport?',
         a: 'Yes, we provide airport taxi service from Tiruchirappalli International Airport (TRZ) for all destinations in Tamil Nadu.',
       },
     ],
@@ -136,7 +136,7 @@ export const CITIES = [
     displayName: 'Salem',
     description: 'Steel City of Tamil Nadu',
     longDescription:
-      'Salem is a major city in Tamil Nadu known for its steel industry and Yercaud hills nearby. TamilNadu Drop Taxi offers reliable cab service from Salem to all destinations.',
+      'Salem is a major city in Tamil Nadu known for its steel industry and Yercaud hills nearby. Top Drop Taxi offers reliable cab service from Salem to all destinations.',
     image: '/images/salem.png',
     routes: 10,
     popular: false,
@@ -185,7 +185,7 @@ export const GLOBAL_FAQS = [
     a: 'A drop taxi is a one-way outstation cab service where you only pay for the one-way journey. Unlike traditional rentals, there is no return fare, making it the most cost-effective option for intercity travel in Tamil Nadu.',
   },
   {
-    q: 'How do I book a taxi online with TamilNadu Drop Taxi?',
+    q: 'How do I book a taxi online with Top Drop Taxi?',
     a: 'Simply fill in your pickup location, drop location, travel date and time in our booking form. Get an instant fare estimate and confirm your booking. Our team will contact you within minutes.',
   },
   {
@@ -193,7 +193,7 @@ export const GLOBAL_FAQS = [
     a: 'Our rates start at ₹15/km for Sedan (Swift Dzire), ₹16/km for Etios, ₹20/km for Innova, and ₹23/km for Innova Crysta. All rates are inclusive of driver bata and toll charges.',
   },
   {
-    q: 'Are TamilNadu Drop Taxi drivers verified?',
+    q: 'Are Top Drop Taxi drivers verified?',
     a: 'Yes, all our drivers undergo thorough background checks, are fully licensed, and are trained in customer service and road safety. Every vehicle is GPS-tracked for your safety.',
   },
   {
