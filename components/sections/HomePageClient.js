@@ -103,7 +103,7 @@ export default function HomePageClient() {
       {/* ── HERO ──────────────────────────────── */}
       <section className="hero" aria-label="Hero">
         <div className="hero-bg">
-          <Image src="/images/bnnerbg.png" alt="" fill style={{ objectFit: 'cover' }} priority quality={85} />
+          <Image src="/images/bannerbg.png" alt="" fill style={{ objectFit: 'cover' }} priority quality={85} />
           <div className="hero-overlay" />
         </div>
         <div className="hero-content">

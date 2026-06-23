@@ -264,7 +264,7 @@ export default function BookingForm({ compact = false }) {
 
         {!estimate && (
           <button type="submit" className="submit-btn btn-book-full" disabled={formDisabled}>
-            {estimating ? '⏳ Calculating…' : '🚕 Get Instant Fare Estimate'}
+            {estimating ? '⏳ Calculating…' : 'Get Instant Fare Estimate'}
           </button>
         )}
       </form>

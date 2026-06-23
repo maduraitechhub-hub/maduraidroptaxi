@@ -100,7 +100,7 @@ export default function PartnerForm() {
             <input id="notes" type="text" name="notes" placeholder="Brief description" disabled={sending} />
           </div>
           <button type="submit" className="btn-book-full" style={{ marginTop: 8 }} disabled={sending}>
-            {sending ? 'Sending…' : '🚗 Join Top Drop Taxi'}
+            {sending ? 'Sending…' : '🚗 Join TamilDropTaxi'}
           </button>
         </form>
       </div>

@@ -220,7 +220,7 @@ export default function MaduraiLocalRoundTripPage() {
         <section className="section-why section-pad">
           <div className="container">
             <div className="section-header-center">
-              <h2 className="section-title">Why Choose Top Drop Taxi in Madurai?</h2>
+              <h2 className="section-title">Why Choose TamilDropTaxi in Madurai?</h2>
             </div>
             <div className="why-grid">
               {[

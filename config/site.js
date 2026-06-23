@@ -9,7 +9,7 @@
 export const DOMAIN_CONFIGS = {
   tamilnadudroptaxi: {
     siteKey: 'tamilnadudroptaxi',
-    siteName: 'Top Drop Taxi',
+    siteName: 'TamilDropTaxi',
     siteTagline: 'Premium Cab Service',
     siteDescription:
       'Tamil Nadu most trusted taxi service. Safe, affordable, and reliable cab booking across all 38 districts since 2015.',
