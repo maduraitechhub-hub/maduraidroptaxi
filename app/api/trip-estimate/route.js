@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+ import { NextResponse } from 'next/server';
 import { calculateTripFare } from '../../../lib/fareCalculator';
 import { getDrivingDistance } from '../../../lib/googleDistance';
 
